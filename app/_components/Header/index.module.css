@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  display: flex;
+  padding: 16px 24px 8px;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logoLink {
+  display: flex;
+  background-color: red;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 24px 16px 8px;
+  }
+}

@@ -1,0 +1,38 @@
+.footer {
+  padding: 16px 24px;
+  text-align: center;
+  color: var(--color-text-sub);
+  font-size: 0.8rem;
+  margin-top: 80px;
+}
+
+.nav {
+  margin-top: 16px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.item>a {
+  transition: .2s;
+}
+
+.item>a:hover {
+  opacity: .7;
+}
+
+@media (max-width: 640px) {
+  .items {
+    flex-wrap: wrap;
+    gap: 8px 0;
+  }
+
+  .item {
+    width: 50%;
+  }
+}
