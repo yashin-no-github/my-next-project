@@ -10,7 +10,8 @@
 
 .logoLink {
   display: flex;
-  background-color: red;
+  background-color: forestgreen;
+  padding: 4px 12px;
 }
 
 .logo {

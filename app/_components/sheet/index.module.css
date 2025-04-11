@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  background-color: #fff;
+  max-width: 840px;
+  width: calc(100% - 90px);
+  margin: -40px auto 0;
+  padding: 80px;
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 48px);
+    padding: 80px 40px;
+  }
+}

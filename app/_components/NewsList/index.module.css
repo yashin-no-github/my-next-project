@@ -11,6 +11,11 @@
   align-items: flex-start;
   gap: 40px;
   padding: 24px 0;
+  transition: all .3s;
+}
+
+.link:hover {
+  opacity: .5;
 }
 
 .image {
