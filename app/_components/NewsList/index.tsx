@@ -19,13 +19,35 @@ export default function NewsList({ news }: Props) {
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
           <Link href={`/news/${article.id}`} className={styles.link}>
-            <Image
-              className={styles.image}
-              src="/no-image.png"
-              alt="No Image"
-              width={1200}
-              height={630}
-            />
+            {article.thumbnail ? (
+              // <Image
+              //   className={styles.image}
+              //   src={article.thumbnail.url}
+              //   alt=""
+              //   width={article.thumbnail.width}
+              //   height={article.thumbnail.height}
+              // />
+              // 追加：画像比率に影響されないよう、imageBoxを追加し、Imageはfillで親要素のサイズになるように
+              <div className={styles.imageBox}>
+                <Image
+                  className={styles.image}
+                  src={article.thumbnail.url}
+                  alt=""
+                  fill
+                />
+              </div>
+            ) : (
+              // 追加
+              <div className={styles.imageBox}>
+                <Image
+                  className={styles.image}
+                  src="/no-image.png"
+                  alt="No Image"
+                  width={1200}
+                  height={630}
+                />
+              </div>
+            )}
             <dl className={styles.content}>
               <dt className={styles.title}>{article.title}</dt>
               <dd className={styles.meta}>
