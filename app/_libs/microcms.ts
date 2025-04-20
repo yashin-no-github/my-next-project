@@ -59,3 +59,16 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
   });
   return listData;
 };
+
+// ニュースの詳細情報を取得する関数
+export const getNewsDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailDate = await client.getListDetail<News>({
+    endpoint: "news",
+    contentId,
+    queries,
+  });
+  return detailDate;
+};
